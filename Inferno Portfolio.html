@@ -258,11 +258,12 @@ footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:22px
       <a class="btn" href="https://github.com/inferno254" target="_blank" rel="noopener">github / inferno254</a>
     </div>
     <div class="pipeline" id="pipeline" aria-hidden="true"></div>
-    <div class="stats">
-      <div class="stat"><strong data-n="19">19</strong><span>Projects &amp; brands</span></div>
+<div class="stats">
+      <div class="stat"><strong data-n="19">19</strong><span>Projects & brands</span></div>
       <div class="stat"><strong data-n="4">4</strong><span>Hackathons in 2026</span></div>
       <div class="stat"><strong data-n="6">6</strong><span>LLM providers routed</span></div>
       <div class="stat"><strong data-n="3">3</strong><span>Live platforms</span></div>
+      <div class="stat"><strong data-n="386">386</strong><span>Tests passing (ZubaraBnB)</span></div>
     </div>
   </header>
 </div>
@@ -278,15 +279,16 @@ footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:22px
     <div class="grid" id="grid"></div>
   </section>
 
-  <section id="stack">
+<section id="stack">
     <div class="sh rv"><h2>Tools in <em>hand</em></h2><p>What I reach for</p></div>
     <div class="skills rv">
       <div class="sk"><h4>Front of house</h4><ul><li>Flutter</li><li>React / Next.js</li><li>Leaflet maps</li><li>Gamified lesson UIs</li></ul></div>
       <div class="sk"><h4>Back of house</h4><ul><li>Supabase + PostGIS</li><li>Node.js</li><li>Vercel deploys</li><li>M-Pesa payment flows</li></ul></div>
-      <div class="sk"><h4>AI &amp; bots</h4><ul><li>LLM routing (Groq, Mistral, OpenRouter, DeepSeek, Gemini, Cerebras)</li><li>Baileys WhatsApp automation</li><li>AI tutors</li><li>Data annotation (Remotasks)</li></ul></div>
-      <div class="sk"><h4>Sheng access</h4><ul><li>Offline-first 93KB JSON lexicon</li><li>Phonetic pipeline + Gemini fallback</li><li>aria-live / TalkBack output</li><li>MutationObserver &amp; Android TTS proxy</li></ul></div>
-      <div class="sk"><h4>Chain &amp; edge</h4><ul><li>Solidity / Hardhat on Avalanche Fuji</li><li>IoT sensing with teammates</li><li>Reddit Devvit apps</li></ul></div>
-      <div class="sk"><h4>Craft</h4><ul><li>Logo &amp; brand work</li><li>Event flyers</li><li>Video editing</li><li>UML / OOAD</li></ul></div>
+      <div class="sk"><h4>AI & bots</h4><ul><li>LLM routing (Groq, Mistral, OpenRouter, DeepSeek, Gemini, Cerebras)</li><li>Baileys WhatsApp automation</li><li>AI tutors</li><li>Data annotation (Remotasks)</li></ul></div>
+      <div class="sk"><h4>Sheng access</h4><ul><li>Offline-first 93KB JSON lexicon</li><li>Phonetic pipeline + Gemini fallback</li><li>aria-live / TalkBack output</li><li>MutationObserver & Android TTS proxy</li></ul></div>
+      <div class="sk"><h4>Chain & edge</h4><ul><li>Solidity / Hardhat on Avalanche Fuji</li><li>IoT sensing with teammates</li><li>Reddit Devvit apps</li></ul></div>
+      <div class="sk"><h4>Security & infra</h4><ul><li>JWT + TOTP MFA (ZubaraBnB)</li><li>AES-256-GCM key encryption (FreeLLMAPI)</li><li>Secret scanning + pre-commit hooks</li><li>Helmet.js + CSP + rate limiting</li><li>ReentrancyGuard + fuzz testing (RoyaltyFlux)</li></ul></div>
+      <div class="sk"><h4>Craft</h4><ul><li>Logo & brand work</li><li>Event flyers</li><li>Video editing</li><li>UML / OOAD</li></ul></div>
     </div>
   </section>
 
@@ -321,82 +323,90 @@ var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 /* ---------- project data ---------- */
 var P=[
- {n:"homeserge",u:"https://homeserge.co.ke",t:"web",tag:"Web · Live",st:"live",line:"Nairobi property listings",
-  d:"A live property-listing platform I built and run for Nairobi renters and hosts, grown from my TikTok house-hunting/listing workflow. Built for practical search, fast listing updates, and location-aware discovery. Live: https://homeserge.co.ke",
-  b:["Frontend: Next.js + React UI with route-based pages and responsive listing cards","Backend/data: Supabase (Postgres) with PostGIS for geo queries, proximity filters, and spatial indexing","Mapping/context: integrating Microsoft and Overture Maps building-footprint data for richer location signals","Delivery: deployed on Vercel; live at https://homeserge.co.ke","Evolution: grew from HomeTrace KE / Nyumba KE prototypes (React, Supabase, Leaflet, Gemini-assisted workflows)"],
-  s:["Next.js","React","TypeScript","Supabase","PostGIS","Vercel","Leaflet"]},
- {n:"Inferno Assistant",t:"ai",tag:"AI · Personal project",st:"build",line:"WhatsApp to laptop",
-  d:"A personal AI assistant that accepts commands over WhatsApp and orchestrates local development tasks across multiple model providers, with routing and fallback logic.",
-  b:["Messaging layer: Baileys-based WhatsApp client for inbound commands and outbound responses","Orchestration: Node.js task runner that selects providers/tools based on request type","Model routing: Groq, Mistral, OpenRouter, DeepSeek, Gemini and Cerebras with fallback paths","Architecture direction: moving from single-model scripts to a modular command/orchestration layer"],
-  s:["Baileys","Node.js","TypeScript","Groq","Gemini","OpenRouter","Mistral"]},
- {n:"RoyaltyFlux",t:"hack web",tag:"Hackathon · Team1 Kenya Mini Hack 2026",st:"done",line:"Song royalties as NFTs",
-  d:"A hackathon payments prototype that represents song royalty splits on-chain and demonstrates payout flows connected to Kenyan mobile money rails.",
-  b:["Smart contracts: Solidity royalty-split logic compiled/deployed with Hardhat","Network/tooling: Avalanche Fuji testnet deployment via Core Wallet workflow","Payments concept: M-Pesa payout flow mapped to on-chain split outcomes for practical settlement","Track focus: Payments, Cohort 1, with team delivery under hackathon constraints"],
-  s:["Solidity","Hardhat","Avalanche Fuji","M-Pesa","Core Wallet","Web3"]},
- {n:"UpGridOracle",t:"hack mobile",tag:"Hackathon · EPRA Hackathon 2026",st:"done",line:"Smart electricity pricing",
-  d:"A smart electricity pricing app concept for Kenya. I worked as the Flutter frontend developer with Timothy, presenting pricing and vulnerability insights clearly for households.",
-  b:["Frontend: Flutter/Dart UI for pricing signals and household-facing views","Data visualization: Nairobi vulnerability heatmap (“Grid Equity Atlas”) for spatial context","Product angle: surfaced live pricing signals to make energy-cost decisions more transparent","Team delivery: frontend implementation aligned with hackathon presentation requirements"],
-  s:["Flutter","Dart","Heatmaps","Data visualization"]},
- {n:"SOS-RADAR",t:"hack mobile",tag:"Hackathon · Team build",st:"done",line:"Road-safety emergency response",
-  d:"A team-built emergency response ecosystem for Kenyan road safety, designed to reduce the time between incident detection and coordinated response.",
-  b:["System split: Timothy (IoT sensing), Prestone (backend), Brillian (DevOps/UX), collaborative integration","Technical flow: incident detection inputs feeding backend coordination and response UX","Engineering focus: reliability-minded role separation across hardware, services, operations, and interface","Outcome: end-to-end concept demonstrating cross-discipline delivery under pressure"],
-  s:["IoT","Backend APIs","DevOps","UX","System design"]},
- {n:"SignAsili",t:"web hack",tag:"Web · Frontend developer",st:"done",line:"Kenyan Sign Language, taught",
-  d:"A learning web app for Kenyan Sign Language where I built the React frontend, focusing on engagement, lesson progression, and guided practice.",
-  b:["Frontend: React component architecture for lessons, progress, and interactive views","Learning mechanics: gamification loops to sustain practice and retention","Instruction flow: lesson engine sequencing content from basic to advanced practice","AI support: tutor-style assistance integrated into the learning experience"],
-  s:["React","JavaScript","Gamification","AI tutor","Frontend architecture"]},
- {n:"AI for Accessibility Toolkit",t:"ai hack",tag:"AI · Senses Hub hackathon, Nairobi",st:"build",line:"Adapt content to the person",
-  d:"An open-source accessibility toolkit made as a maker at the AI for Accessibility Design and Hackathon, co-designed with contributors recruited through United Disabled Persons of Kenya.",
-  b:["Core model: Need, Profile, Skill, and Adaptation primitives map user needs to content changes","Components: Librarian service for discovering adaptations and renderers for delivery formats","Language work: researched Sheng datasets to improve relevance for Kenyan users","Engineering intent: modular, reusable accessibility adaptation pipeline rather than one-off demos"],
-  s:["AI","Accessibility","Python","Sheng data","Modular design"]},
- {n:"AquaSense",t:"hack mobile",tag:"IoT · Presented",st:"done",line:"Smarter irrigation",
-  d:"An IoT irrigation management concept that uses sensed field conditions to guide water use, presented as a practical resource-efficiency solution.",
-  b:["Sensing layer: IoT inputs representing field/environment conditions","Decision support: dashboard-oriented view for irrigation actions","Value focus: reduce guesswork, save water, and improve farmer effort allocation","Presentation: communicated technical approach and impact in a demo setting"],
-  s:["IoT","Sensors","Dashboard","Systems thinking"]},
- {n:"ModGuard Pro",t:"ai",tag:"AI · Reddit Devvit app",st:"done",line:"Calmer moderation",
-  d:"A Reddit moderation app that helps volunteer moderators triage faster by condensing noisy reports and surfacing behavior patterns.",
-  b:["Platform: built on Reddit Devvit app runtime with TypeScript","Feature: Smart Report Condenser aggregates repeated/related reports into actionable summaries","Feature: Behavioral Pattern Detector highlights repeat trouble signals","Feature: GoodCitizen Rewards recognizes constructive community participation"],
-  s:["Devvit","TypeScript","Moderation tooling","Pattern detection"]},
- {n:"Vault",t:"mobile web",tag:"Fintech · Concept and build",st:"build",line:"Savings you keep on purpose",
-  d:"A voluntary savings product concept for campus users, designed around intentional guardrails and familiar Kenyan payment behavior.",
-  b:["Payments: M-Pesa-centered flows designed around Daraja-style integration patterns","Behavior design: user-approved standing orders for auto-save","Commitment tools: time locks, cooling-off delay, and a voice note from a past self before early withdrawal","Architecture intent: clear separation between savings rules, payment events, and user controls"],
-  s:["M-Pesa","Daraja","Behavioral design","Fintech UX"]},
- {n:"DukaPlug",u:"https://dukaplug.vercel.app",t:"web brand",tag:"Web · Live",st:"live",line:"Food, groceries and shopping delivered",
-  d:"A live delivery web presence that started with campus food delivery and expanded toward groceries and general shopping, with branding and product iteration. Live: https://dukaplug.vercel.app",
-  b:["Product scope: campus-first ordering flow expanded into broader delivery categories","Brand work: naming exploration (CampusPlug/UniPlug) and fork-and-cart visual identity","Web delivery: deployed live on Vercel at https://dukaplug.vercel.app","Iteration focus: clear service messaging, conversion-oriented landing structure"],
-  s:["Web","Branding","Vercel","UI iteration"]},
- {n:"Zubara Property Management",u:"https://zubara.co.ke",t:"brand web",tag:"Brand / Web · Live",st:"live",line:"ZB monogram identity",
-  d:"Brand refinement for a property-management presence, keeping the gold ZB monogram and tightening the lockup for consistent use across web and print surfaces. Live: https://zubara.co.ke",
-  b:["Identity system: preserved ZB monogram, Zubara name, and PROPERTY MANAGEMENT hierarchy","Design craft: aligned wordmark/rule/tagline widths and spacing for balance","Output: solid and transparent exports for deployment contexts","Live presence: https://zubara.co.ke"],
-  s:["Brand identity","Logo systems","Web presence"]},
- {n:"TSE Live Flyer",t:"brand",tag:"Design · Minor craft item",st:"done",line:"Event poster",
-  d:"A small 4:5 event poster made for a friend’s event — included as a minor example of quick visual/editing support, not a core software project.",
-  b:["Format: social-ready 4:5 composition","Role: fast-turnaround design/editing assist"],
-  s:["Poster design","Social media"]},
- {n:"Nairobi Listings",t:"web",tag:"Business · Real estate · Founder",st:"live",line:"Listing and managing homes",
-  d:"A Nairobi rental-listing operation I founded and manage, covering bedsitters and multi-bedroom homes (including Gataka/Tumaini areas). I handle sourcing, listing, updates, and renter communication, with TikTok distribution.",
-  b:["Founder role: sourced properties, created/maintained listings, and managed availability and inquiries","Operations: coordinated listing updates and renter-facing communication","Distribution: TikTok posts to reach renters and surface available units quickly","Product insight: validated demand and workflows that directly informed https://homeserge.co.ke"],
-  s:["Founder ops","Property listings","TikTok","Local operations","Market validation"]},
+  {n:"homeserge",u:"https://homeserge.co.ke",t:"web",tag:"Web · Live",st:"live",line:"Nairobi property listings",
+   d:"A live property-listing platform I built and run for Nairobi renters and hosts, grown from my TikTok house-hunting/listing workflow. Built for practical search, fast listing updates, and location-aware discovery. Live: https://homeserge.co.ke",
+   b:["Frontend: Next.js + React UI with route-based pages and responsive listing cards","Backend/data: Supabase (Postgres) with PostGIS for geo queries, proximity filters, and spatial indexing","Mapping/context: integrating Microsoft and Overture Maps building-footprint data for richer location signals","Delivery: deployed on Vercel; live at https://homeserge.co.ke","Security: phone-first OTP auth via Africa's Talking SMS, role-based access (admin/updater/publisher) with Supabase RLS policies, secure Edge Functions for auth flow"],
+   s:["Next.js","React","TypeScript","Supabase","PostGIS","Vercel","Leaflet"]},
+  {n:"Inferno Assistant",t:"ai",tag:"AI · Personal project",st:"build",line:"WhatsApp to laptop",
+   d:"A personal AI assistant that accepts commands over WhatsApp and orchestrates local development tasks across multiple model providers, with routing and fallback logic.",
+   b:["Messaging layer: Baileys-based WhatsApp client for inbound commands and outbound responses","Orchestration: Node.js task runner that selects providers/tools based on request type","Model routing: Groq, Mistral, OpenRouter, DeepSeek, Gemini and Cerebras with fallback paths","Architecture direction: moving from single-model scripts to a modular command/orchestration layer"],
+   s:["Baileys","Node.js","TypeScript","Groq","Gemini","OpenRouter","Mistral"]},
+  {n:"RoyaltyFlux",u:"https://github.com/inferno254/RoyaltyFlux",t:"hack web",tag:"Hackathon · Team1 Kenya Mini Hack 2026",st:"done",line:"Song royalties as NFTs",
+   d:"A hackathon payments prototype that represents song royalty splits on-chain and demonstrates payout flows connected to Kenyan mobile money rails. Security hardened for real money handling.",
+   b:["Smart contracts: Solidity royalty-split logic compiled/deployed with Hardhat (Foundry)","Network/tooling: Avalanche Fuji testnet deployment via Core Wallet workflow","Payments concept: M-Pesa payout flow mapped to on-chain split outcomes for practical settlement","Security: ReentrancyGuard, Checks-Effects-Interactions pattern, Chainlink decentralized oracle, Foundry fuzz testing + Slither static analysis, Helmet.js + CSP, 256-bit JWT, rate limiting, Zod validation"],
+   s:["Solidity","Hardhat","Avalanche Fuji","M-Pesa","Core Wallet","Web3","Foundry"]},
+  {n:"UpGridOracle",t:"hack mobile",tag:"Hackathon · EPRA Hackathon 2026",st:"done",line:"Smart electricity pricing",
+   d:"A smart electricity pricing app concept for Kenya. I worked as the Flutter frontend developer with Timothy, presenting pricing and vulnerability insights clearly for households.",
+   b:["Frontend: Flutter/Dart UI for pricing signals and household-facing views","Data visualization: Nairobi vulnerability heatmap (“Grid Equity Atlas”) for spatial context","Product angle: surfaced live pricing signals to make energy-cost decisions more transparent","Team delivery: frontend implementation aligned with hackathon presentation requirements"],
+   s:["Flutter","Dart","Heatmaps","Data visualization"]},
+  {n:"SOS-RADAR",u:"https://github.com/inferno254/SOS-RADAR-FULL",t:"hack mobile",tag:"Hackathon · Team build",st:"done",line:"Road-safety emergency response",
+   d:"A team-built emergency response ecosystem for Kenyan road safety, designed to reduce the time between incident detection and coordinated response. Full-stack IoT + AI + mobile platform.",
+   b:["System split: Timothy (IoT sensing), Prestone (backend), Brillian (DevOps/UX), collaborative integration","Technical flow: incident detection inputs feeding backend coordination and response UX","Engineering focus: reliability-minded role separation across hardware, services, operations, and interface","Security: Firebase Realtime DB + WebSocket with auth, rate limiting, error handling middleware, secure M-Pesa STK push integration, IoT device auth via MQTT"],
+   s:["IoT","Backend APIs","DevOps","UX","System design","Firebase","M-Pesa"]},
+  {n:"SignAsili",t:"web hack",tag:"Web · Frontend developer",st:"done",line:"Kenyan Sign Language, taught",
+   d:"A learning web app for Kenyan Sign Language where I built the React frontend, focusing on engagement, lesson progression, and guided practice.",
+   b:["Frontend: React component architecture for lessons, progress, and interactive views","Learning mechanics: gamification loops to sustain practice and retention","Instruction flow: lesson engine sequencing content from basic to advanced practice","AI support: tutor-style assistance integrated into the learning experience"],
+   s:["React","JavaScript","Gamification","AI tutor","Frontend architecture"]},
+  {n:"AI for Accessibility Toolkit",t:"ai hack",tag:"AI · Senses Hub hackathon, Nairobi",st:"build",line:"Adapt content to the person",
+   d:"An open-source accessibility toolkit made as a maker at the AI for Accessibility Design and Hackathon, co-designed with contributors recruited through United Disabled Persons of Kenya.",
+   b:["Core model: Need, Profile, Skill, and Adaptation primitives map user needs to content changes","Components: Librarian service for discovering adaptations and renderers for delivery formats","Language work: researched Sheng datasets to improve relevance for Kenyan users","Engineering intent: modular, reusable accessibility adaptation pipeline rather than one-off demos"],
+   s:["AI","Accessibility","Python","Sheng data","Modular design"]},
+  {n:"AquaSense",t:"hack mobile",tag:"IoT · Presented",st:"done",line:"Smarter irrigation",
+   d:"An IoT irrigation management concept that uses sensed field conditions to guide water use, presented as a practical resource-efficiency solution.",
+   b:["Sensing layer: IoT inputs representing field/environment conditions","Decision support: dashboard-oriented view for irrigation actions","Value focus: reduce guesswork, save water, and improve farmer effort allocation","Presentation: communicated technical approach and impact in a demo setting"],
+   s:["IoT","Sensors","Dashboard","Systems thinking"]},
+  {n:"ModGuard Pro",u:"https://github.com/inferno254/modguard-pro",t:"ai",tag:"AI · Reddit Devvit app",st:"done",line:"Calmer moderation",
+   d:"A Reddit moderation app that helps volunteer moderators triage faster by condensing noisy reports and surfacing behavior patterns. Built on Devvit with security-focused moderation tooling.",
+   b:["Platform: built on Reddit Devvit app runtime with TypeScript","Feature: Smart Report Condenser aggregates repeated/related reports into actionable summaries","Feature: Behavioral Pattern Detector highlights repeat trouble signals using heuristic analysis","Feature: GoodCitizen Rewards recognizes constructive community participation","Security: Devvit sandbox isolation, TypeScript strict mode, input sanitization for report content"],
+   s:["Devvit","TypeScript","Moderation tooling","Pattern detection"]},
+  {n:"Vault",t:"mobile web",tag:"Fintech · Concept and build",st:"build",line:"Savings you keep on purpose",
+   d:"A voluntary savings product concept for campus users, designed around intentional guardrails and familiar Kenyan payment behavior.",
+   b:["Payments: M-Pesa-centered flows designed around Daraja-style integration patterns","Behavior design: user-approved standing orders for auto-save","Commitment tools: time locks, cooling-off delay, and a voice note from a past self before early withdrawal","Architecture intent: clear separation between savings rules, payment events, and user controls"],
+   s:["M-Pesa","Daraja","Behavioral design","Fintech UX"]},
+  {n:"DukaPlug",u:"https://dukaplug.vercel.app",t:"web brand",tag:"Web · Live",st:"live",line:"Food, groceries and shopping delivered",
+   d:"A live delivery web presence that started with campus food delivery and expanded toward groceries and general shopping, with branding and product iteration. Live: https://dukaplug.vercel.app",
+   b:["Product scope: campus-first ordering flow expanded into broader delivery categories","Brand work: naming exploration (CampusPlug/UniPlug) and fork-and-cart visual identity","Web delivery: deployed live on Vercel at https://dukaplug.vercel.app","Iteration focus: clear service messaging, conversion-oriented landing structure"],
+   s:["Web","Branding","Vercel","UI iteration"]},
+  {n:"Zubara Property Management",u:"https://zubara.co.ke",t:"brand web",tag:"Brand / Web · Live",st:"live",line:"ZB monogram identity",
+   d:"Brand refinement for a property-management presence, keeping the gold ZB monogram and tightening the lockup for consistent use across web and print surfaces. Live: https://zubara.co.ke",
+   b:["Identity system: preserved ZB monogram, Zubara name, and PROPERTY MANAGEMENT hierarchy","Design craft: aligned wordmark/rule/tagline widths and spacing for balance","Output: solid and transparent exports for deployment contexts","Live presence: https://zubara.co.ke"],
+   s:["Brand identity","Logo systems","Web presence"]},
+  {n:"ZubaraBnB Backend API",u:"https://github.com/inferno254/bnb-backend-api",t:"web security",tag:"Security · Multi-tenant API",st:"live",line:"JWT + TOTP MFA, secret scanning, 386 tests",
+   d:"Production-grade multi-tenant residential booking backend (ZubaraBnB). Node.js + TypeScript + Express, Prisma + PostgreSQL, with per-tenant database isolation, JWT auth with enforced TOTP MFA for privileged roles, M-Pesa payments with idempotent callbacks, signed receipts, and a platform control plane. Security-first: secret scanner in CI, pre-commit hooks, production startup guards blocking fake secrets, Azure Key Vault integration for tenant credentials.",
+   b:["Auth: JWT login, refresh-token binding, password hashing, TOTP MFA enforced for OWNER/MANAGER dashboard roles","Multi-tenancy: Control plane + DB-per-tenant provisioning, /t/:subdomain routing, tenant client pooling","Payments: M-Pesa Daraja STK push + C2B callbacks, idempotent + advisory-locked, amount + reference validated","Receipts: Dedicated RECEIPT_SIGNING_SECRET, signed + publicly verifiable, emailed to guest, owner notified","Security: Secret scanner (scripts/secret-scan.mjs), pre-commit hook, production placeholder-secret refusal, startup guards asserting Key Vault provider, Helmet.js + CSP, rate limiting, Zod validation","Testing: 386 tests across 59 files — booking validation, receipt signing, M-Pesa callback security, concurrent double-booking (20-parallel race)"],
+   s:["Node.js","TypeScript","Express","Prisma","PostgreSQL","JWT","TOTP","M-Pesa","Azure Key Vault","Vitest"]},
+  {n:"FreeLLMAPI",u:"https://github.com/inferno254/freellmapi",t:"ai security",tag:"Security · LLM Gateway",st:"live",line:"Encrypted keys, smart routing, 34 providers",
+   d:"A unified OpenAI-compatible gateway aggregating 34 free LLM providers (7.4B tokens/month). Provider keys are AES-256-GCM encrypted in SQLite and decrypted in-memory per request; apps only see a single unified bearer token. Smart routing with 6 strategies, automatic failover on 429/5xx, per-key rate tracking (RPM/RPD/TPM/TPD), self-updating signed model catalog from freellmapi.co, sticky sessions with context handoff, opt-in prompt compression, MCP server for ChatGPT/agents. Runs locally (desktop app) or self-hosted.",
+   b:["Encryption: AES-256-GCM for provider keys at rest, in-memory decryption per request","Routing: 6 strategies with live per-model speed/capability/reliability scores, automatic failover with cooldowns and key rotation","Rate tracking: Per-(platform,model,key) counters learning provider ceilings","Catalog: Self-updating signed catalog from freellmapi.co (monthly snapshot for free, same-day for premium)","Surfaces: OpenAI /v1/chat/completions, /v1/responses, /v1/messages (Anthropic), /v1beta (Gemini), Ollama emulation, MCP server","Ops: Response cache, encrypted DB backups, key health checks, bulk import/export, declarative startup config"],
+   s:["Node.js","TypeScript","SQLite","AES-256-GCM","MCP","OpenAI-compatible","Anthropic","Gemini","Ollama"]},
+  {n:"TSE Live Flyer",t:"brand",tag:"Design · Minor craft item",st:"done",line:"Event poster",
+   d:"A small 4:5 event poster made for a friend's event — included as a minor example of quick visual/editing support, not a core software project.",
+   b:["Format: social-ready 4:5 composition","Role: fast-turnaround design/editing assist"],
+   s:["Poster design","Social media"]},
+  {n:"Nairobi Listings",t:"web",tag:"Business · Real estate · Founder",st:"live",line:"Listing and managing homes",
+   d:"A Nairobi rental-listing operation I founded and manage, covering bedsitters and multi-bedroom homes (including Gataka/Tumaini areas). I handle sourcing, listing, updates, and renter communication, with TikTok distribution.",
+   b:["Founder role: sourced properties, created/maintained listings, and managed availability and inquiries","Operations: coordinated listing updates and renter-facing communication","Distribution: TikTok posts to reach renters and surface available units quickly","Product insight: validated demand and workflows that directly informed https://homeserge.co.ke"],
+   s:["Founder ops","Property listings","TikTok","Local operations","Market validation"]},
   {n:"Sheng Core Engine",t:"ai sheng",tag:"AI · Offline-first, 93KB lexicon",st:"build",line:"Phonetic pipeline",
-  d:"A sub-millisecond, offline-first linguistic engine that acts as a phonetic translation layer for Kenyan screen readers, handling mixed code-switched Sheng text.",
-  b:["5-stage deterministic pipeline: language identification, Bantu prefix stripping, O(1) lexicon lookup, fallback, phonetic reassembly","Data: 1,000+ term static JSON lexicon (~93KB) optimized for fast local access","Fallback: unknown slang can route to Gemini 2.0 Flash with a strict timeout guard","Output: reassembles text into syllables/pronunciation cues suitable for TalkBack/TTS"],
-  s:["TypeScript","ESM","Node.js","Gemini 2.0 Flash","JSON lexicon"]},
+   d:"A sub-millisecond, offline-first linguistic engine that acts as a phonetic translation layer for Kenyan screen readers, handling mixed code-switched Sheng text.",
+   b:["5-stage deterministic pipeline: language identification, Bantu prefix stripping, O(1) lexicon lookup, fallback, phonetic reassembly","Data: 1,000+ term static JSON lexicon (~93KB) optimized for fast local access","Fallback: unknown slang can route to Gemini 2.0 Flash with a strict timeout guard","Output: reassembles text into syllables/pronunciation cues suitable for TalkBack/TTS"],
+   s:["TypeScript","ESM","Node.js","Gemini 2.0 Flash","JSON lexicon"]},
   {n:"Sheng Mode Reader",t:"web sheng",tag:"Web · WCAG 2.1 AA sandbox",st:"build",line:"Phonetic testing sandbox",
-  d:"An accessible web reader that preserves visible text while exposing a phonetic output channel for assistive technology, used to test the Sheng pipeline in-browser.",
-  b:["Accessibility architecture: two-pane pattern with hidden `aria-live=\"polite\"` output","Interaction: quick-test presets and adjustable playback speed for evaluation","Integration: runs the core engine in real time from the browser UI","Standards focus: WCAG-oriented structure for screen-reader testing"],
-  s:["Vite","TypeScript","HTML","CSS","Web Speech API","ARIA"]},
+   d:"An accessible web reader that preserves visible text while exposing a phonetic output channel for assistive technology, used to test the Sheng pipeline in-browser.",
+   b:["Accessibility architecture: two-pane pattern with hidden `aria-live=\"polite\"` output","Interaction: quick-test presets and adjustable playback speed for evaluation","Integration: runs the core engine in real time from the browser UI","Standards focus: WCAG-oriented structure for screen-reader testing"],
+   s:["Vite","TypeScript","HTML","CSS","Web Speech API","ARIA"]},
   {n:"In-Situ Chrome Extension",t:"ai sheng",tag:"Chrome · MV3, 56KB",st:"build",line:"Live web modifier",
-  d:"A Manifest V3 extension that applies Sheng accessibility transformations to live pages without changing their visual layout.",
-  b:["DOM strategy: MutationObserver watches dynamic text changes on live portals","Transformation: processes text nodes through the engine and injects phonetic `aria-label` values","Compatibility: designed to work on existing Kenyan web content with minimal footprint","Packaging: lightweight MV3 implementation focused on runtime efficiency"],
-  s:["Chrome MV3","JavaScript","MutationObserver","DOM","ARIA"]},
+   d:"A Manifest V3 extension that applies Sheng accessibility transformations to live pages without changing their visual layout.",
+   b:["DOM strategy: MutationObserver watches dynamic text changes on live portals","Transformation: processes text nodes through the engine and injects phonetic `aria-label` values","Compatibility: designed to work on existing Kenyan web content with minimal footprint","Packaging: lightweight MV3 implementation focused on runtime efficiency"],
+   s:["Chrome MV3","JavaScript","MutationObserver","DOM","ARIA"]},
   {n:"Android TTS Proxy",t:"mobile sheng",tag:"Android · OS-level proxy",st:"build",line:"System-wide voice proxy",
-  d:"A native Android TextToSpeechService proxy that intercepts TalkBack strings before speech output, aiming to make Sheng pronunciation improvements available system-wide.",
-  b:["Runtime: Kotlin service with local lexicon loaded from `assets/` for offline behavior","Concurrency: coroutine-based queue handling (`QUEUE_FLUSH`) for rapid swipe/navigation events","Resilience: fail-safe paths preserve original speech when fallback/processing is unavailable","Integration target: improves pronunciation handling across apps while keeping baseline TTS usable"],
-  s:["Kotlin","Android SDK","TextToSpeechService","OkHttp","Coroutines"]},
+   d:"A native Android TextToSpeechService proxy that intercepts TalkBack strings before speech output, aiming to make Sheng pronunciation improvements available system-wide.",
+   b:["Runtime: Kotlin service with local lexicon loaded from `assets/` for offline behavior","Concurrency: coroutine-based queue handling (`QUEUE_FLUSH`) for rapid swipe/navigation events","Resilience: fail-safe paths preserve original speech when fallback/processing is unavailable","Integration target: improves pronunciation handling across apps while keeping baseline TTS usable"],
+   s:["Kotlin","Android SDK","TextToSpeechService","OkHttp","Coroutines"]},
   {n:"Mock Kenyan Portals",t:"ai sheng",tag:"AI · QA testing env",st:"build",line:"Simulated Sheng forums",
-  d:"A local Node.js test environment hosting simulated Sheng-heavy forums/articles to stress-test parsing, accessibility output, and pipeline behavior.",
-  b:["Environment: local Node.js server serving realistic mixed-language content","QA use: exercises edge cases for code-switching and dynamic text updates","Integration: supports toolkit datastore/consent module development and regression checks","Purpose: controlled testbed complementing live-site extension testing"],
-  s:["Node.js","HTML/CSS","QA workflows","Git submodules"]}
+   d:"A local Node.js test environment hosting simulated Sheng-heavy forums/articles to stress-test parsing, accessibility output, and pipeline behavior.",
+   b:["Environment: local Node.js server serving realistic mixed-language content","QA use: exercises edge cases for code-switching and dynamic text updates","Integration: supports toolkit datastore/consent module development and regression checks","Purpose: controlled testbed complementing live-site extension testing"],
+   s:["Node.js","HTML/CSS","QA workflows","Git submodules"]}
 ];
 var STC={live:"#4ade80",build:"#ffb347",done:"#8c869c"};
 var STT={live:"Live",build:"In progress",done:"Delivered"};
@@ -442,7 +452,7 @@ var half=words.map(function(w){return '<span>'+w+'</span>'}).join('');
 tr.innerHTML=half+half;
 
 /* ---------- typing line ---------- */
-var tl=["nairobi-based engineer","flutter + react + typescript builder","shipping local-problem products","hackathon maker","accessibility + systems thinker"];
+var tl=["nairobi-based engineer","flutter + react + typescript builder","shipping local-problem products","hackathon maker","accessibility + systems thinker","security-first fullstack"];
 var te=document.getElementById('type'),ti=0,ci=0,del=false;
 if(te) te.firstChild ? te.firstChild.nodeValue='' : te.textContent='';
 if(!reduce){
