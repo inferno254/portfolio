@@ -335,8 +335,8 @@ footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:22px
   <nav>
     <a class="logo" href="#top"><i></i>inferno254</a>
     <ul>
-      <li><a href="#work">Work</a></li>
-      <li><a href="#stack">Stack</a></li>
+      <li><a href="#stack">Capabilities</a></li>
+      <li><a href="#work">Projects</a></li>
       <li><a href="#path">Path</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -348,8 +348,9 @@ footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:22px
     <div class="type" id="type" aria-live="off">software engineering student</div>
     <p class="lede">Erick Neko — also known as <b>inferno</b>. Fullstack engineer &amp; AI red teaming researcher. I build resilient distributed systems in Flutter, React, and TypeScript — and rigorously test them against adversarial threats. From multi-turn prompt injection and indirect tool hijacking to OWASP LLM top 10 auditing, housing (<a href="https://homeserge.co.ke" target="_blank" rel="noopener" style="color:var(--ember-hi);text-decoration:underline;text-underline-offset:3px">homeserge</a>), delivery (<a href="https://dukaplug.vercel.app" target="_blank" rel="noopener" style="color:var(--ember-hi);text-decoration:underline;text-underline-offset:3px">DukaPlug</a>), property management (<a href="https://zubara.co.ke" target="_blank" rel="noopener" style="color:var(--ember-hi);text-decoration:underline;text-underline-offset:3px">Zubara</a>), and an offline-first Sheng accessibility engine.</p>
     <div class="cta">
-      <a class="btn solid" href="#work">See the work</a>
-      <a class="btn" href="https://github.com/inferno254" target="_blank" rel="noopener">github / inferno254</a>
+      <a class="btn solid" href="#stack">What I Can Do</a>
+      <a class="btn" href="#work">Explore Projects</a>
+      <a class="btn" href="https://github.com/inferno254" target="_blank" rel="noopener">GitHub / inferno254</a>
     </div>
     <div class="pipeline" id="pipeline" aria-hidden="true"></div>
 <div class="stats">
@@ -367,24 +368,115 @@ footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:22px
 </div>
 
 <div class="wrap">
-  <section id="work">
+    <section id="stack">
+    <div class="sh rv">
+      <h2>Capabilities in <em>hand</em></h2>
+      <p>Everything I can build, break &amp; ship — at a glance</p>
+    </div>
+    <div class="skills rv">
+      <div class="sk">
+        <h4>🛡️ AI Red Teaming &amp; Security</h4>
+        <ul>
+          <li>Multi-turn direct prompt injection &amp; persona nesting (OWASP LLM01)</li>
+          <li>System prompt &amp; hidden instruction extraction (OWASP LLM07)</li>
+          <li>Indirect prompt injection (IPI) &amp; tool hijacking (OWASP LLM06)</li>
+          <li>RAG chunk poisoning &amp; retrieval context contamination (OWASP LLM03)</li>
+          <li>Low-resource dialect evasion testing (Sheng / Swahili code-switching)</li>
+          <li>Defensive blueprints: dual-model verifiers, XML delimiters &amp; tool gating</li>
+        </ul>
+      </div>
+
+      <div class="sk">
+        <h4>⚡ Front of House &amp; Mobile</h4>
+        <ul>
+          <li>Flutter &amp; Dart cross-platform mobile apps (Android &amp; iOS)</li>
+          <li>React &amp; Next.js (App Router, SSR/SSG, responsive component design)</li>
+          <li>Vite, modern TypeScript &amp; vanilla web engineering</li>
+          <li>Geospatial mapping (Leaflet, Mapbox, Microsoft &amp; Overture footprints)</li>
+          <li>Gamified interactive interfaces &amp; lesson progression engines</li>
+          <li>Dark-mode first, accessible &amp; fluid UI design</li>
+        </ul>
+      </div>
+
+      <div class="sk">
+        <h4>⚙️ Back of House &amp; Data</h4>
+        <ul>
+          <li>Node.js &amp; Express RESTful API architecture</li>
+          <li>PostgreSQL &amp; PostGIS (spatial indexing, geo queries, proximity search)</li>
+          <li>Supabase &amp; Prisma ORM database modeling &amp; migrations</li>
+          <li>M-Pesa payment integration (Daraja API, STK Push, callbacks)</li>
+          <li>Vercel edge functions, serverless deploys &amp; CI/CD automations</li>
+          <li>Relational schema design, normalization &amp; query optimization</li>
+        </ul>
+      </div>
+
+      <div class="sk">
+        <h4>🧠 AI Orchestration &amp; Multi-LLM</h4>
+        <ul>
+          <li>Multi-provider routing &amp; failover (Groq, Mistral, OpenRouter, DeepSeek, Gemini, Cerebras)</li>
+          <li>Baileys WhatsApp automation &amp; bi-directional bot clients</li>
+          <li>OpenAI-compatible &amp; Anthropic unified API proxying</li>
+          <li>AI tutors, adaptive learning loops &amp; conversational workflows</li>
+          <li>Data labeling, RLHF &amp; AI fine-tuning workflows (Remotasks experience)</li>
+          <li>Low-latency streaming &amp; token-optimized prompts</li>
+        </ul>
+      </div>
+
+      <div class="sk">
+        <h4>♿ Accessibility &amp; Linguistic Tech</h4>
+        <ul>
+          <li>Offline-first linguistic processing engines (93KB static JSON lexicons)</li>
+          <li>5-stage phonetic normalizer for screen readers (LID, prefix stripping, TalkBack)</li>
+          <li>WCAG 2.1 AA compliant interfaces &amp; live ARIA announcer patterns (`aria-live`)</li>
+          <li>In-situ Chrome Extension (MV3 DOM mutation interception)</li>
+          <li>Native Android `TextToSpeechService` OS-level audio interception (Kotlin)</li>
+          <li>Co-design with United Disabled Persons of Kenya (UDPK) at Senses Hub</li>
+        </ul>
+      </div>
+
+      <div class="sk">
+        <h4>🔐 App Security &amp; Infrastructure</h4>
+        <ul>
+          <li>JWT auth lifecycle, refresh-token binding &amp; TOTP MFA (RFC 6238)</li>
+          <li>At-rest encryption (AES-256-GCM authenticated encryption with PBKDF2)</li>
+          <li>HTTP hardening: Helmet.js, Content Security Policy (CSP), strict CORS &amp; rate limiting</li>
+          <li>Solidity smart contracts, Hardhat, Avalanche Fuji &amp; ReentrancyGuard auditing</li>
+          <li>Git secret scanning &amp; pre-commit safety hooks</li>
+          <li>Docker containerization &amp; isolated deployment sandboxes</li>
+        </ul>
+      </div>
+
+      <div class="sk">
+        <h4>🎨 Creative Brand &amp; Digital Craft</h4>
+        <ul>
+          <li>Brand identity design, logo lockups &amp; SVG vector monograms (Zubara)</li>
+          <li>High-impact social campaign posters &amp; event flyers (4:5 social assets)</li>
+          <li>Video editing, post-production &amp; motion pacing (58 Arts and Customs)</li>
+          <li>Technical documentation, UML / OOAD system blueprints &amp; architecture specs</li>
+          <li>Domain, DNS &amp; brand asset management</li>
+        </ul>
+      </div>
+
+      <div class="sk">
+        <h4>🚀 Growth, Product &amp; Execution</h4>
+        <ul>
+          <li>Solo founder operations: sourcing, listing &amp; managing Nairobi real estate</li>
+          <li>TikTok content distribution &amp; local market validation (homeserge origin)</li>
+          <li>Rapid hackathon execution (EPRA 2026, Team1 Mini Hack, Senses Hub)</li>
+          <li>Cross-functional team coordination (hardware IoT, backend, design, mobile)</li>
+          <li>Campus-first delivery logistics &amp; vendor onboarding (DukaPlug)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+<section id="work">
     <div class="sh rv"><h2>Live <em>burns</em></h2><p id="count">20 projects</p></div>
     <div class="filters rv" id="filters" role="group" aria-label="Filter projects"></div>
     <div class="grid" id="grid"></div>
   </section>
 
-<section id="stack">
-    <div class="sh rv"><h2>Tools in <em>hand</em></h2><p>What I reach for</p></div>
-    <div class="skills rv">
-      <div class="sk"><h4>Front of house</h4><ul><li>Flutter</li><li>React / Next.js</li><li>Leaflet maps</li><li>Gamified lesson UIs</li></ul></div>
-      <div class="sk"><h4>Back of house</h4><ul><li>Supabase + PostGIS</li><li>Node.js</li><li>Vercel deploys</li><li>M-Pesa payment flows</li></ul></div>
-      <div class="sk"><h4>AI & bots</h4><ul><li>LLM routing (Groq, Mistral, OpenRouter, DeepSeek, Gemini, Cerebras)</li><li>Baileys WhatsApp automation</li><li>AI tutors</li><li>Data annotation (Remotasks)</li></ul></div>
-      <div class="sk"><h4>Sheng access</h4><ul><li>Offline-first 93KB JSON lexicon</li><li>Phonetic pipeline + Gemini fallback</li><li>aria-live / TalkBack output</li><li>MutationObserver & Android TTS proxy</li></ul></div>
-      <div class="sk"><h4>Chain & edge</h4><ul><li>Solidity / Hardhat on Avalanche Fuji</li><li>IoT sensing with teammates</li><li>Reddit Devvit apps</li></ul></div>
-      <div class="sk"><h4>Security & infra</h4><ul><li>JWT + TOTP MFA (ZubaraBnB)</li><li>AES-256-GCM key encryption (FreeLLMAPI)</li><li>Secret scanning + pre-commit hooks</li><li>Helmet.js + CSP + rate limiting</li><li>ReentrancyGuard + fuzz testing (RoyaltyFlux)</li></ul></div>
-      <div class="sk"><h4>Craft</h4><ul><li>Logo & brand work</li><li>Event flyers</li><li>Video editing</li><li>UML / OOAD</li></ul></div>
-    </div>
-  </section>
+
 
   <section id="path">
     <div class="sh rv"><h2>The <em>path</em></h2><p>So far</p></div>
