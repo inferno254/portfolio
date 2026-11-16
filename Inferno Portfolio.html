@@ -1,4 +1,98 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}
+/* --- Custom Ember Scrollbar --- */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: var(--void); border-left: 1px solid var(--line); }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--ember-hi) 0%, var(--ember) 50%, var(--ember-lo) 100%);
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(255, 90, 42, 0.5);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #fff5d0 0%, var(--ember-hi) 50%, var(--ember) 100%);
+  box-shadow: 0 0 14px rgba(255, 179, 71, 0.8);
+}
+* { scrollbar-width: thin; scrollbar-color: var(--ember) var(--void); }
+
+/* --- Minecraft Fire Sword Custom Cursor --- */
+html, body {
+  cursor: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDE2IDE2IiBzaGFwZS1yZW5kZXJpbmc9ImNyaXNwRWRnZXMiPgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmZmZmZmYiLz4KICA8cmVjdCB4PSIxIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjMTgxNDEwIi8+CiAgPHJlY3QgeD0iMCIgeT0iMSIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iIzE4MTQxMCIvPgogIDxyZWN0IHg9IjEiIHk9IjEiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmZmY1ZDAiLz4KICA8cmVjdCB4PSIyIiB5PSIxIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjZmZiMzQ3Ii8+CiAgPHJlY3QgeD0iMSIgeT0iMiIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iI2ZmYjM0NyIvPgogIDxyZWN0IHg9IjIiIHk9IjIiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmZjVhMmEiLz4KICA8cmVjdCB4PSIyIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjMTgxNDEwIi8+CiAgPHJlY3QgeD0iMyIgeT0iMSIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iIzE4MTQxMCIvPgogIDxyZWN0IHg9IjQiIHk9IjIiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiMxODE0MTAiLz4KICA8cmVjdCB4PSI1IiB5PSIzIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjMTgxNDEwIi8+CiAgPHJlY3QgeD0iNiIgeT0iNCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iIzE4MTQxMCIvPgogIDxyZWN0IHg9IjciIHk9IjUiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiMxODE0MTAiLz4KICA8cmVjdCB4PSIwIiB5PSIyIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjMTgxNDEwIi8+CiAgPHJlY3QgeD0iMSIgeT0iMyIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iIzE4MTQxMCIvPgogIDxyZWN0IHg9IjIiIHk9IjQiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiMxODE0MTAiLz4KICA8cmVjdCB4PSIzIiB5PSI1IiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjMTgxNDEwIi8+CiAgPHJlY3QgeD0iNCIgeT0iNiIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iIzE4MTQxMCIvPgogIDxyZWN0IHg9IjUiIHk9IjciIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiMxODE0MTAiLz4KICA8cmVjdCB4PSIzIiB5PSIyIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjZmY5MDMwIi8+CiAgPHJlY3QgeD0iMiIgeT0iMyIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iI2ZmN2EyMCIvPgogIDxyZWN0IHg9IjMiIHk9IjMiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmZjVhMmEiLz4KICA8cmVjdCB4PSI0IiB5PSIzIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjZmY3YTIwIi8+CiAgPHJlY3QgeD0iMyIgeT0iNCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iI2ZmNWEyYSIvPgogIDxyZWN0IHg9IjQiIHk9IjQiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNlMDMwMTAiLz4KICA8cmVjdCB4PSI1IiB5PSI0IiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjZmY1YTJhIi8+CiAgPHJlY3QgeD0iNCIgeT0iNSIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iI2UwMzAxMCIvPgogIDxyZWN0IHg9IjUiIHk9IjUiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNjMDIwMDgiLz4KICA8cmVjdCB4PSI2IiB5PSI1IiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjZTAzMDEwIi8+CiAgPHJlY3QgeD0iNSIgeT0iNiIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iI2MwMjAwOCIvPgogIDxyZWN0IHg9IjYiIHk9IjYiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiM4YjE0MDQiLz4KICA8cmVjdCB4PSI3IiB5PSI0IiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjMTgxNDEwIi8+CiAgPHJlY3QgeD0iOCIgeT0iNSIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iIzE4MTQxMCIvPgogIDxyZWN0IHg9IjciIHk9IjYiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiM2ZDRjNDEiLz4KICA8cmVjdCB4PSI4IiB5PSI2IiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjOGQ2ZTYzIi8+CiAgPHJlY3QgeD0iNCIgeT0iNyIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iIzE4MTQxMCIvPgogIDxyZWN0IHg9IjUiIHk9IjgiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiMxODE0MTAiLz4KICA8cmVjdCB4PSI2IiB5PSI3IiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjNmQ0YzQxIi8+CiAgPHJlY3QgeD0iNiIgeT0iOCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iIzhkNmU2MyIvPgogIDxyZWN0IHg9IjciIHk9IjciIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiM0ZTM0MmUiLz4KICA8cmVjdCB4PSI4IiB5PSI3IiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjMTgxNDEwIi8+CiAgPHJlY3QgeD0iNyIgeT0iOCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iIzE4MTQxMCIvPgogIDxyZWN0IHg9IjgiIHk9IjgiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiM1ZDQwMzciLz4KICA8cmVjdCB4PSI5IiB5PSI4IiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjMTgxNDEwIi8+CiAgPHJlY3QgeD0iOCIgeT0iOSIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iIzE4MTQxMCIvPgogIDxyZWN0IHg9IjkiIHk9IjkiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiMzZTI3MjMiLz4KICA8cmVjdCB4PSIxMCIgeT0iOSIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iIzE4MTQxMCIvPgogIDxyZWN0IHg9IjkiIHk9IjEwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjMTgxNDEwIi8+CiAgPHJlY3QgeD0iMTAiIHk9IjEwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjNWQ0MDM3Ii8+CiAgPHJlY3QgeD0iMTEiIHk9IjEwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjMTgxNDEwIi8+CiAgPHJlY3QgeD0iMTAiIHk9IjExIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjMTgxNDEwIi8+CiAgPHJlY3QgeD0iMTEiIHk9IjExIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjZmZiMzQ3Ii8+CiAgPHJlY3QgeD0iMTIiIHk9IjExIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjMTgxNDEwIi8+CiAgPHJlY3QgeD0iMTEiIHk9IjEyIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjMTgxNDEwIi8+CiAgPHJlY3QgeD0iMTIiIHk9IjEyIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjMTgxNDEwIi8+Cjwvc3ZnPg==") 0 0, auto !important;
+}
+a, button, .chip, .toggle, .btn, .node, input, select, .more, .status, .card {
+  cursor: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDE2IDE2IiBzaGFwZS1yZW5kZXJpbmc9ImNyaXNwRWRnZXMiPgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmZmZmZmYiLz4KICA8cmVjdCB4PSIxIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjMTgxNDEwIi8+CiAgPHJlY3QgeD0iMCIgeT0iMSIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iIzE4MTQxMCIvPgogIDxyZWN0IHg9IjEiIHk9IjEiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmZmY1ZDAiLz4KICA8cmVjdCB4PSIyIiB5PSIxIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjZmZiMzQ3Ii8+CiAgPHJlY3QgeD0iMSIgeT0iMiIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iI2ZmYjM0NyIvPgogIDxyZWN0IHg9IjIiIHk9IjIiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmZjVhMmEiLz4KICA8cmVjdCB4PSIyIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjMTgxNDEwIi8+CiAgPHJlY3QgeD0iMyIgeT0iMSIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iIzE4MTQxMCIvPgogIDxyZWN0IHg9IjQiIHk9IjIiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiMxODE0MTAiLz4KICA8cmVjdCB4PSI1IiB5PSIzIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjMTgxNDEwIi8+CiAgPHJlY3QgeD0iNiIgeT0iNCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iIzE4MTQxMCIvPgogIDxyZWN0IHg9IjciIHk9IjUiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiMxODE0MTAiLz4KICA8cmVjdCB4PSIwIiB5PSIyIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjMTgxNDEwIi8+CiAgPHJlY3QgeD0iMSIgeT0iMyIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iIzE4MTQxMCIvPgogIDxyZWN0IHg9IjIiIHk9IjQiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiMxODE0MTAiLz4KICA8cmVjdCB4PSIzIiB5PSI1IiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjMTgxNDEwIi8+CiAgPHJlY3QgeD0iNCIgeT0iNiIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iIzE4MTQxMCIvPgogIDxyZWN0IHg9IjUiIHk9IjciIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiMxODE0MTAiLz4KICA8cmVjdCB4PSIzIiB5PSIyIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjZmY5MDMwIi8+CiAgPHJlY3QgeD0iMiIgeT0iMyIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iI2ZmN2EyMCIvPgogIDxyZWN0IHg9IjMiIHk9IjMiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmZjVhMmEiLz4KICA8cmVjdCB4PSI0IiB5PSIzIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjZmY3YTIwIi8+CiAgPHJlY3QgeD0iMyIgeT0iNCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iI2ZmNWEyYSIvPgogIDxyZWN0IHg9IjQiIHk9IjQiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNlMDMwMTAiLz4KICA8cmVjdCB4PSI1IiB5PSI0IiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjZmY1YTJhIi8+CiAgPHJlY3QgeD0iNCIgeT0iNSIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iI2UwMzAxMCIvPgogIDxyZWN0IHg9IjUiIHk9IjUiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNjMDIwMDgiLz4KICA8cmVjdCB4PSI2IiB5PSI1IiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjZTAzMDEwIi8+CiAgPHJlY3QgeD0iNSIgeT0iNiIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iI2MwMjAwOCIvPgogIDxyZWN0IHg9IjYiIHk9IjYiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiM4YjE0MDQiLz4KICA8cmVjdCB4PSI3IiB5PSI0IiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjMTgxNDEwIi8+CiAgPHJlY3QgeD0iOCIgeT0iNSIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iIzE4MTQxMCIvPgogIDxyZWN0IHg9IjciIHk9IjYiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiM2ZDRjNDEiLz4KICA8cmVjdCB4PSI4IiB5PSI2IiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjOGQ2ZTYzIi8+CiAgPHJlY3QgeD0iNCIgeT0iNyIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iIzE4MTQxMCIvPgogIDxyZWN0IHg9IjUiIHk9IjgiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiMxODE0MTAiLz4KICA8cmVjdCB4PSI2IiB5PSI3IiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjNmQ0YzQxIi8+CiAgPHJlY3QgeD0iNiIgeT0iOCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iIzhkNmU2MyIvPgogIDxyZWN0IHg9IjciIHk9IjciIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiM0ZTM0MmUiLz4KICA8cmVjdCB4PSI4IiB5PSI3IiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjMTgxNDEwIi8+CiAgPHJlY3QgeD0iNyIgeT0iOCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iIzE4MTQxMCIvPgogIDxyZWN0IHg9IjgiIHk9IjgiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiM1ZDQwMzciLz4KICA8cmVjdCB4PSI5IiB5PSI4IiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjMTgxNDEwIi8+CiAgPHJlY3QgeD0iOCIgeT0iOSIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iIzE4MTQxMCIvPgogIDxyZWN0IHg9IjkiIHk9IjkiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiMzZTI3MjMiLz4KICA8cmVjdCB4PSIxMCIgeT0iOSIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0iIzE4MTQxMCIvPgogIDxyZWN0IHg9IjkiIHk9IjEwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjMTgxNDEwIi8+CiAgPHJlY3QgeD0iMTAiIHk9IjEwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjNWQ0MDM3Ii8+CiAgPHJlY3QgeD0iMTEiIHk9IjEwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjMTgxNDEwIi8+CiAgPHJlY3QgeD0iMTAiIHk9IjExIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjMTgxNDEwIi8+CiAgPHJlY3QgeD0iMTEiIHk9IjExIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjZmZiMzQ3Ii8+CiAgPHJlY3QgeD0iMTIiIHk9IjExIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjMTgxNDEwIi8+CiAgPHJlY3QgeD0iMTEiIHk9IjEyIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjMTgxNDEwIi8+CiAgPHJlY3QgeD0iMTIiIHk9IjEyIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSIjMTgxNDEwIi8+Cjwvc3ZnPg==") 0 0, pointer !important;
+}
+
+/* --- Flame Trail & Water Quench Steam Physics --- */
+.flametrail {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  overflow: hidden;
+}
+.ft-p {
+  position: absolute;
+  pointer-events: none;
+  border-radius: 50%;
+  will-change: transform, opacity;
+  animation: ftQuench var(--dur, 2.2s) cubic-bezier(.2,.8,.2,1) forwards;
+}
+.ft-p.fire-orange {
+  background: radial-gradient(circle, #fff 10%, #ffd043 35%, #ff5a2a 70%, rgba(255,90,42,0) 100%);
+  box-shadow: 0 0 10px rgba(255,90,42,.85), 0 0 20px rgba(255,179,71,.5);
+}
+.ft-p.fire-blue {
+  background: radial-gradient(circle, #fff 10%, #7dd3fc 35%, #0284c7 70%, rgba(2,132,199,0) 100%);
+  box-shadow: 0 0 12px rgba(56,189,248,.85), 0 0 22px rgba(14,165,233,.5);
+}
+.ft-p.fire-purple {
+  background: radial-gradient(circle, #fff 10%, #d8b4fe 35%, #9333ea 70%, rgba(147,51,234,0) 100%);
+  box-shadow: 0 0 12px rgba(192,132,252,.85), 0 0 22px rgba(147,51,234,.5);
+}
+.ft-steam {
+  position: absolute;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(224,242,254,.85) 0%, rgba(186,230,253,.5) 45%, rgba(147,197,253,0) 75%);
+  filter: blur(2px);
+  will-change: transform, opacity;
+  animation: ftSteam 1.6s ease-out forwards;
+}
+.ft-drop {
+  position: absolute;
+  pointer-events: none;
+  border-radius: 50%;
+  background: #38bdf8;
+  box-shadow: 0 0 6px rgba(56,189,248,.9);
+  will-change: transform, opacity;
+  animation: ftDrop 1.2s ease-in forwards;
+}
+@keyframes ftQuench {
+  0% { transform: translate(0, 0) scale(1.6); opacity: 1; }
+  30% { transform: translate(var(--mx), var(--my)) scale(1.3); opacity: .95; }
+  55% { transform: translate(var(--mx2), var(--my2)) scale(1.1); opacity: .8; }
+  75% {
+    transform: translate(var(--mx2), calc(var(--my2) - 14px)) scale(1.9);
+    background: radial-gradient(circle, rgba(186,230,253,.85) 0%, rgba(96,165,250,.4) 45%, transparent 75%);
+    box-shadow: 0 0 14px rgba(56,189,248,.6);
+    filter: blur(2px);
+    opacity: .55;
+  }
+  100% {
+    transform: translate(var(--mx2), calc(var(--my2) - 34px)) scale(2.8);
+    opacity: 0;
+    filter: blur(5px);
+  }
+}
+@keyframes ftSteam {
+  0% { transform: scale(.6) translateY(0); opacity: .9; }
+  50% { transform: scale(1.8) translateY(-18px); opacity: .6; }
+  100% { transform: scale(3.2) translateY(-40px); opacity: 0; }
+}
+@keyframes ftDrop {
+  0% { transform: scale(1) translate(0, 0); opacity: .95; }
+  100% { transform: scale(.2) translate(var(--dx), 24px); opacity: 0; }
+
+</style></head><body>
 <title>Inferno Portfolio</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -252,7 +346,7 @@ footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:22px
     <div class="kicker"><b>●</b> Nairobi, Kenya <span>·</span> Cooperative University of Kenya</div>
     <h1 class="word" id="word" data-t="Inferno">Inferno</h1>
     <div class="type" id="type" aria-live="off">software engineering student</div>
-    <p class="lede">Eric Neko — also known as <b>inferno</b>. I build in Flutter, React and TypeScript. Hackathons and real local problems: housing, power, road safety, sign language, savings, and an offline-first Sheng accessibility engine that makes Kenyan screen readers speak the way we actually talk. Live work: <a href="https://homeserge.co.ke" target="_blank" rel="noopener" style="color:var(--ember-hi);text-decoration:underline;text-underline-offset:3px">homeserge</a>, <a href="https://dukaplug.vercel.app" target="_blank" rel="noopener" style="color:var(--ember-hi);text-decoration:underline;text-underline-offset:3px">DukaPlug</a>, and <a href="https://zubara.co.ke" target="_blank" rel="noopener" style="color:var(--ember-hi);text-decoration:underline;text-underline-offset:3px">Zubara</a>.</p>
+    <p class="lede">Erick Neko — also known as <b>inferno</b>. Fullstack engineer &amp; AI red teaming researcher. I build resilient distributed systems in Flutter, React, and TypeScript — and rigorously test them against adversarial threats. From multi-turn prompt injection and indirect tool hijacking to OWASP LLM top 10 auditing, housing (<a href="https://homeserge.co.ke" target="_blank" rel="noopener" style="color:var(--ember-hi);text-decoration:underline;text-underline-offset:3px">homeserge</a>), delivery (<a href="https://dukaplug.vercel.app" target="_blank" rel="noopener" style="color:var(--ember-hi);text-decoration:underline;text-underline-offset:3px">DukaPlug</a>), property management (<a href="https://zubara.co.ke" target="_blank" rel="noopener" style="color:var(--ember-hi);text-decoration:underline;text-underline-offset:3px">Zubara</a>), and an offline-first Sheng accessibility engine.</p>
     <div class="cta">
       <a class="btn solid" href="#work">See the work</a>
       <a class="btn" href="https://github.com/inferno254" target="_blank" rel="noopener">github / inferno254</a>
@@ -274,7 +368,7 @@ footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:22px
 
 <div class="wrap">
   <section id="work">
-    <div class="sh rv"><h2>Live <em>burns</em></h2><p id="count">19 projects</p></div>
+    <div class="sh rv"><h2>Live <em>burns</em></h2><p id="count">20 projects</p></div>
     <div class="filters rv" id="filters" role="group" aria-label="Filter projects"></div>
     <div class="grid" id="grid"></div>
   </section>
@@ -323,6 +417,10 @@ var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 /* ---------- project data ---------- */
 var P=[
+  {n:"LLM Red Teaming & Adversarial Lab",u:"https://github.com/inferno254/llm-redteam-lab",t:"ai security",tag:"Security · Empirical Research",st:"live",line:"Adversarial LLM & Agent Testing",
+   d:"Empirical adversarial evaluations and vulnerability case studies on LLM applications, multi-agent tool-calling workflows, and RAG architectures. Aligned with OWASP Top 10 for LLMs. Live lab repo: https://github.com/inferno254/llm-redteam-lab",
+   b:["Direct multi-turn jailbreaking: persona splitting & academic framing bypassing safety refusal heuristics (OWASP LLM01)","System prompt extraction: delimiter confusion & format inversion leaking confidential instructions (OWASP LLM07)","Indirect prompt injection: untrusted document payloads hijacking autonomous tool calls and simulated data exfiltration (OWASP LLM06)","Defensive blueprint: dual-model verification filters, strict XML boundary tagging, and least-privilege tool execution","Reproducible test harness: benchmarks across Llama-3, Mistral, Groq endpoints, and commercial APIs in sandboxed labs"],
+   s:["AI Red Teaming","Prompt Injection","OWASP LLM Top 10","Python","Node.js","Ollama","Llama-3","Agent Security"]},
   {n:"homeserge",u:"https://homeserge.co.ke",t:"web",tag:"Web · Live",st:"live",line:"Nairobi property listings",
    d:"A live property-listing platform I built and run for Nairobi renters and hosts, grown from my TikTok house-hunting/listing workflow. Built for practical search, fast listing updates, and location-aware discovery. Live: https://homeserge.co.ke",
    b:["Frontend: Next.js + React UI with route-based pages and responsive listing cards","Backend/data: Supabase (Postgres) with PostGIS for geo queries, proximity filters, and spatial indexing","Mapping/context: integrating Microsoft and Overture Maps building-footprint data for richer location signals","Delivery: deployed on Vercel; live at https://homeserge.co.ke","Security: phone-first OTP auth via Africa's Talking SMS, role-based access (admin/updater/publisher) with Supabase RLS policies, secure Edge Functions for auth flow"],
@@ -347,10 +445,10 @@ var P=[
    d:"A learning web app for Kenyan Sign Language where I built the React frontend, focusing on engagement, lesson progression, and guided practice.",
    b:["Frontend: React component architecture for lessons, progress, and interactive views","Learning mechanics: gamification loops to sustain practice and retention","Instruction flow: lesson engine sequencing content from basic to advanced practice","AI support: tutor-style assistance integrated into the learning experience"],
    s:["React","JavaScript","Gamification","AI tutor","Frontend architecture"]},
-  {n:"AI for Accessibility Toolkit",t:"ai hack",tag:"AI · Senses Hub hackathon, Nairobi",st:"build",line:"Adapt content to the person",
+  {n:"AI for Accessibility Toolkit",u:"https://github.com/inferno254/ai-toolkit",t:"ai hack",tag:"AI · Senses Hub hackathon, Nairobi",st:"build",line:"Adapt content to the person",
    d:"An open-source accessibility toolkit made as a maker at the AI for Accessibility Design and Hackathon, co-designed with contributors recruited through United Disabled Persons of Kenya.",
-   b:["Core model: Need, Profile, Skill, and Adaptation primitives map user needs to content changes","Components: Librarian service for discovering adaptations and renderers for delivery formats","Language work: researched Sheng datasets to improve relevance for Kenyan users","Engineering intent: modular, reusable accessibility adaptation pipeline rather than one-off demos"],
-   s:["AI","Accessibility","Python","Sheng data","Modular design"]},
+   b:["Core model: Need, Profile, Skill, and Adaptation primitives map user needs to content changes","Components: Librarian service for discovering adaptations and renderers for delivery formats","Test environment: built mock-kenyan-portals Node.js server simulating Sheng-heavy forums and articles for automated stress-testing","Language work: researched Sheng datasets to improve relevance for Kenyan users","Engineering intent: modular, reusable accessibility adaptation pipeline rather than one-off demos"],
+   s:["AI","Accessibility","Python","Sheng data","Modular design","Node.js"]},
   {n:"AquaSense",t:"hack mobile",tag:"IoT · Presented",st:"done",line:"Smarter irrigation",
    d:"An IoT irrigation management concept that uses sensed field conditions to guide water use, presented as a practical resource-efficiency solution.",
    b:["Sensing layer: IoT inputs representing field/environment conditions","Decision support: dashboard-oriented view for irrigation actions","Value focus: reduce guesswork, save water, and improve farmer effort allocation","Presentation: communicated technical approach and impact in a demo setting"],
@@ -365,8 +463,8 @@ var P=[
    s:["M-Pesa","Daraja","Behavioral design","Fintech UX"]},
   {n:"DukaPlug",u:"https://dukaplug.vercel.app",t:"web brand",tag:"Web · Live",st:"live",line:"Food, groceries and shopping delivered",
    d:"A live delivery web presence that started with campus food delivery and expanded toward groceries and general shopping, with branding and product iteration. Live: https://dukaplug.vercel.app",
-   b:["Product scope: campus-first ordering flow expanded into broader delivery categories","Brand work: naming exploration (CampusPlug/UniPlug) and fork-and-cart visual identity","Web delivery: deployed live on Vercel at https://dukaplug.vercel.app","Iteration focus: clear service messaging, conversion-oriented landing structure"],
-   s:["Web","Branding","Vercel","UI iteration"]},
+   b:["Product scope: campus-first ordering flow expanded into broader delivery categories","Brand work: naming exploration (CampusPlug/UniPlug) and fork-and-cart visual identity","Design craft: also created high-engagement event posters & visual assets (such as the TSE Live 4:5 social campaign poster) showcasing fast-turnaround visual brand communication","Web delivery: deployed live on Vercel at https://dukaplug.vercel.app","Iteration focus: clear service messaging, conversion-oriented landing structure"],
+   s:["Web","Branding","Vercel","UI iteration","Visual Design"]},
   {n:"Zubara Property Management",u:"https://zubara.co.ke",t:"brand web",tag:"Brand / Web · Live",st:"live",line:"ZB monogram identity",
    d:"Brand refinement for a property-management presence, keeping the gold ZB monogram and tightening the lockup for consistent use across web and print surfaces. Live: https://zubara.co.ke",
    b:["Identity system: preserved ZB monogram, Zubara name, and PROPERTY MANAGEMENT hierarchy","Design craft: aligned wordmark/rule/tagline widths and spacing for balance","Output: solid and transparent exports for deployment contexts","Live presence: https://zubara.co.ke"],
@@ -379,10 +477,6 @@ var P=[
    d:"A unified OpenAI-compatible gateway aggregating 34 free LLM providers (7.4B tokens/month). Provider keys are AES-256-GCM encrypted in SQLite and decrypted in-memory per request; apps only see a single unified bearer token. Smart routing with 6 strategies, automatic failover on 429/5xx, per-key rate tracking (RPM/RPD/TPM/TPD), self-updating signed model catalog from freellmapi.co, sticky sessions with context handoff, opt-in prompt compression, MCP server for ChatGPT/agents. Runs locally (desktop app) or self-hosted.",
    b:["Encryption: AES-256-GCM for provider keys at rest, in-memory decryption per request","Routing: 6 strategies with live per-model speed/capability/reliability scores, automatic failover with cooldowns and key rotation","Rate tracking: Per-(platform,model,key) counters learning provider ceilings","Catalog: Self-updating signed catalog from freellmapi.co (monthly snapshot for free, same-day for premium)","Surfaces: OpenAI /v1/chat/completions, /v1/responses, /v1/messages (Anthropic), /v1beta (Gemini), Ollama emulation, MCP server","Ops: Response cache, encrypted DB backups, key health checks, bulk import/export, declarative startup config"],
    s:["Node.js","TypeScript","SQLite","AES-256-GCM","MCP","OpenAI-compatible","Anthropic","Gemini","Ollama"]},
-  {n:"TSE Live Flyer",t:"brand",tag:"Design · Minor craft item",st:"done",line:"Event poster",
-   d:"A small 4:5 event poster made for a friend's event — included as a minor example of quick visual/editing support, not a core software project.",
-   b:["Format: social-ready 4:5 composition","Role: fast-turnaround design/editing assist"],
-   s:["Poster design","Social media"]},
   {n:"Nairobi Listings",t:"web",tag:"Business · Real estate · Founder",st:"live",line:"Listing and managing homes",
    d:"A Nairobi rental-listing operation I founded and manage, covering bedsitters and multi-bedroom homes (including Gataka/Tumaini areas). I handle sourcing, listing, updates, and renter communication, with TikTok distribution.",
    b:["Founder role: sourced properties, created/maintained listings, and managed availability and inquiries","Operations: coordinated listing updates and renter-facing communication","Distribution: TikTok posts to reach renters and surface available units quickly","Product insight: validated demand and workflows that directly informed https://homeserge.co.ke"],
@@ -402,15 +496,11 @@ var P=[
   {n:"Android TTS Proxy",t:"mobile sheng",tag:"Android · OS-level proxy",st:"build",line:"System-wide voice proxy",
    d:"A native Android TextToSpeechService proxy that intercepts TalkBack strings before speech output, aiming to make Sheng pronunciation improvements available system-wide.",
    b:["Runtime: Kotlin service with local lexicon loaded from `assets/` for offline behavior","Concurrency: coroutine-based queue handling (`QUEUE_FLUSH`) for rapid swipe/navigation events","Resilience: fail-safe paths preserve original speech when fallback/processing is unavailable","Integration target: improves pronunciation handling across apps while keeping baseline TTS usable"],
-   s:["Kotlin","Android SDK","TextToSpeechService","OkHttp","Coroutines"]},
-  {n:"Mock Kenyan Portals",t:"ai sheng",tag:"AI · QA testing env",st:"build",line:"Simulated Sheng forums",
-   d:"A local Node.js test environment hosting simulated Sheng-heavy forums/articles to stress-test parsing, accessibility output, and pipeline behavior.",
-   b:["Environment: local Node.js server serving realistic mixed-language content","QA use: exercises edge cases for code-switching and dynamic text updates","Integration: supports toolkit datastore/consent module development and regression checks","Purpose: controlled testbed complementing live-site extension testing"],
-   s:["Node.js","HTML/CSS","QA workflows","Git submodules"]}
+   s:["Kotlin","Android SDK","TextToSpeechService","OkHttp","Coroutines"]}
 ];
 var STC={live:"#4ade80",build:"#ffb347",done:"#8c869c"};
 var STT={live:"Live",build:"In progress",done:"Delivered"};
-var F=[["all","All"],["web","Web"],["mobile","Mobile"],["hack","Hackathon"],["ai","AI"],["brand","Brand"],["sheng","Sheng access"]];
+var F=[["all","All"],["security","Security & Red Team"],["web","Web"],["mobile","Mobile"],["hack","Hackathon"],["ai","AI"],["brand","Brand"],["sheng","Sheng access"]];
 
 var grid=document.getElementById('grid'),fl=document.getElementById('filters'),cnt=document.getElementById('count');
 function pad(i){return (i<9?'0':'')+(i+1)}
@@ -662,4 +752,101 @@ if(!reduce&&cv.getContext){
 })();
 </script>
 
+/* ---------- Minecraft cursor flame trail + water quench extinguishing ---------- */
+(function(){
+  if(reduce)return;
+  var trail = document.createElement("div");
+  trail.className = "flametrail";
+  trail.setAttribute("aria-hidden", "true");
+  document.body.appendChild(trail);
+
+  var lastX = -999, lastY = -999, lastTime = 0;
+
+  function spawnQuench(x, y, kind){
+    var p = document.createElement("div");
+    var size = 8 + Math.random()*12;
+    p.className = "ft-p fire-" + kind;
+    p.style.width = size + "px";
+    p.style.height = size + "px";
+    p.style.left = (x - size/2) + "px";
+    p.style.top = (y - size/2) + "px";
+    
+    // Slight drift
+    var mx = (Math.random() - 0.5) * 22;
+    var my = - (6 + Math.random() * 24);
+    var mx2 = mx + (Math.random() - 0.5) * 16;
+    var my2 = my - (14 + Math.random() * 28);
+    var dur = (1.9 + Math.random() * 0.9);
+    p.style.setProperty("--mx", mx + "px");
+    p.style.setProperty("--my", my + "px");
+    p.style.setProperty("--mx2", mx2 + "px");
+    p.style.setProperty("--my2", my2 + "px");
+    p.style.setProperty("--dur", dur + "s");
+
+    trail.appendChild(p);
+
+    // After 65% of lifespan (~1.2s - 1.5s), flame gets extinguished with water droplets and steam
+    var quenchDelay = (dur * 0.62) * 1000;
+    setTimeout(function(){
+      if(!trail.contains(p)) return;
+      var steam = document.createElement("div");
+      steam.className = "ft-steam";
+      var sSize = size * 1.5;
+      steam.style.width = sSize + "px";
+      steam.style.height = sSize + "px";
+      steam.style.left = (x + mx2 - sSize/2) + "px";
+      steam.style.top = (y + my2 - sSize/2) + "px";
+      trail.appendChild(steam);
+      setTimeout(function(){ if(steam.parentNode) steam.remove(); }, 1600);
+
+      // Water droplets splash out as fire is quenched
+      for(var d = 0; d < 2; d++){
+        var drop = document.createElement("div");
+        drop.className = "ft-drop";
+        var dropSize = 3 + Math.random()*3;
+        drop.style.width = dropSize + "px";
+        drop.style.height = dropSize + "px";
+        drop.style.left = (x + mx2) + "px";
+        drop.style.top = (y + my2) + "px";
+        drop.style.setProperty("--dx", ((Math.random() - 0.5)*26) + "px");
+        trail.appendChild(drop);
+        setTimeout(function(){ if(drop.parentNode) drop.remove(); }, 1200);
+      }
+    }, quenchDelay);
+
+    setTimeout(function(){ if(p.parentNode) p.remove(); }, dur * 1000 + 100);
+  }
+
+  addEventListener("pointermove", function(e){
+    var now = performance.now();
+    if(lastX === -999){ lastX = e.clientX; lastY = e.clientY; lastTime = now; return; }
+    var dt = (now - lastTime) || 16;
+    var dist = Math.hypot(e.clientX - lastX, e.clientY - lastY);
+    var speed = dist / dt;
+
+    if(speed > 0.15 || dist > 14){
+      // Determine flame color: majority orange (~82%), minimal blue (~10%), minimal purple (~8%)
+      var r = Math.random();
+      var kind = 'orange';
+      if(r < 0.10) kind = 'blue';
+      else if(r < 0.18) kind = 'purple';
+
+      // Tip of Minecraft sword is offset by (+2, +2)
+      var px = e.clientX + 2 + (Math.random() - 0.5) * 8;
+      var py = e.clientY + 2 + (Math.random() - 0.5) * 8;
+      spawnQuench(px, py, kind);
+
+      // If moving briskly, spawn a complementary micro-ember
+      if(speed > 0.45){
+        var r2 = Math.random();
+        var k2 = r2 < 0.12 ? 'blue' : (r2 < 0.22 ? 'purple' : 'orange');
+        spawnQuench(e.clientX + (Math.random()-0.5)*14, e.clientY + (Math.random()-0.5)*14, k2);
+      }
+      if(trail.children.length > 60){ trail.removeChild(trail.firstChild); }
+      lastX = e.clientX;
+      lastY = e.clientY;
+      lastTime = now;
+    }
+  }, {passive:true});
+})();
 </body></html>
